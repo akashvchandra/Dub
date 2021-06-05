@@ -144,8 +144,8 @@ class _TranslateState extends State<Translate> {
                     child: Container(
                       padding: EdgeInsets.only(left: 16.0, right: 16.0),
                       decoration: BoxDecoration(
-                          border: Border.all(color: Colors.black, width: 2.0),
-                          borderRadius: BorderRadius.circular(15.0)),
+                          border: Border.all(color: Colors.blue, width: 1.0),
+                          borderRadius: BorderRadius.circular(10.0)),
                       child: DropdownButtonHideUnderline(
                         child: DropdownButton<String>(
                           hint: Text("Choose language"),
@@ -221,7 +221,7 @@ class _TranslateState extends State<Translate> {
           ),
           Container(
               width: 300,
-              height: 250,
+              height: 200,
               decoration: new BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(color: Colors.blue),

@@ -55,7 +55,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
             fit: BoxFit.cover,
           ),
           SizedBox(
-            height: 10,
+            height: 20,
           ),
           SpinKitChasingDots(color: Colors.blue)
         ],

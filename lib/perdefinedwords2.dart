@@ -10,7 +10,7 @@ class EmotePage2 extends StatelessWidget {
       appBar: _appbar,
       body: WillPopScope(
         onWillPop: () {
-          Navigator.pushReplacement(
+          return Navigator.pushReplacement(
               context,
               PageTransition(
                   type: PageTransitionType.rightToLeftWithFade,
@@ -22,9 +22,9 @@ class EmotePage2 extends StatelessWidget {
           child: SafeArea(
             child: Center(
               child: Padding(
-                padding: const EdgeInsets.all(35.0),
+                padding: const EdgeInsets.all(20),
                 child: Container(
-                  /*  margin: EdgeInsets.fromLTRB(35, 0, 0, 0), */
+                  /*  margin: EdgeInsets.fromLTRB(0, 0, 0, 0), */
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     crossAxisAlignment: CrossAxisAlignment.start,

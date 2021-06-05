@@ -17,7 +17,7 @@ class _EmotePage1State extends State<EmotePage1> {
         child: Align(
           alignment: Alignment.center,
           child: Container(
-            /* margin: EdgeInsets.fromLTRB(35, 0, 0, 0), */
+          margin: EdgeInsets.fromLTRB(95, 0, 0, 0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.start,

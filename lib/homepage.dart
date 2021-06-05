@@ -127,12 +127,12 @@ class _HomepageState extends State<Homepage> {
       items: [
         BottomNavigationBarItem(
           icon: Icon(Icons.speaker),
-          title: Text('Speech'),
+          title: Text('Speak'),
         ),
         BottomNavigationBarItem(
             icon: Icon(Icons.translate), title: Text('Translate')),
         BottomNavigationBarItem(
-            icon: Icon(Icons.emoji_emotions), title: Text('Emote')),
+            icon: Icon(Icons.emoji_emotions), title: Text('Easy Access')),
       ],
     );
   }

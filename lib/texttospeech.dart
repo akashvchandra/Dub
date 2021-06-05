@@ -240,7 +240,7 @@ class _TextToSpeechState extends State<TextToSpeech> {
   Widget _btnSection() {
     if (isAndroid) {
       return Container(
-        padding: EdgeInsets.only(top: 45.0),
+        padding: EdgeInsets.only(top: 35.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
@@ -258,7 +258,7 @@ class _TextToSpeechState extends State<TextToSpeech> {
                     fit: BoxFit.cover,
                   ),
                   iconSize: 75,
-                  padding: EdgeInsets.all(16),
+                  padding: EdgeInsets.all(12),
                 ),
                 Text("Play",
                     style: TextStyle(
@@ -281,7 +281,7 @@ class _TextToSpeechState extends State<TextToSpeech> {
                     fit: BoxFit.cover,
                   ),
                   iconSize: 70,
-                  padding: EdgeInsets.all(16),
+                  padding: EdgeInsets.all(12),
                 ),
                 Text("Stop",
                     style: TextStyle(
@@ -295,7 +295,7 @@ class _TextToSpeechState extends State<TextToSpeech> {
       );
     } else {
       return Container(
-          padding: EdgeInsets.only(top: 50.0),
+          padding: EdgeInsets.only(top: 25.0),
           child:
               Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
             Column(
@@ -349,7 +349,7 @@ class _TextToSpeechState extends State<TextToSpeech> {
   }
 
   Widget _languageDropDownSection(dynamic languages) => Container(
-      padding: EdgeInsets.only(top: 50.0),
+      padding: EdgeInsets.only(top: 30.0),
       child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
         Container(
           alignment: Alignment.center,
