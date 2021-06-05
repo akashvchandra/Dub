@@ -20,31 +20,33 @@ class _TranslateState extends State<Translate> {
     "English": "en",
     "Urdu": "ur",
     "Spanish": "es",
-    "telugu": "te",
-    "tamil": "ta",
-    "kannada": "kn",
-    "malayalam": "ml",
-    "panjabi punjabi": "pa",
+    "Telugu": "te",
+    "Tamil": "ta",
+    "Kannada": "kn",
+    "Malayalam": "ml",
+    "Punjabi": "pa",
     "Gujarati": "gu",
     "Bengali Bangla": "bn",
     "Marathi": "mr",
     "Nepali": "ne",
     "Afrikaans": "af",
+    "Albanian": "sq",
     "Amharic": "am",
     "Arabic": "ar",
+    "Armenian": "hy",
     "Assamese": "as",
     "Azerbaijani": "az",
+    "Basque": "eu",
     "Belarusian": "be",
     "Bulgarian": "bg",
     "Bosnian": "bs",
+    "Chinese": "yue",
     "Catalan Valencian": "ca",
     "Czech": "cs",
     "Danish": "da",
     "German": "de",
     "Modern Greek": "el",
     "Estonian": "et",
-    "Basque": "eu",
-    "Persian": "fa",
     "Finnish": "fi",
     "Filipino Pilipino": "fil",
     "French": "fr",
@@ -53,7 +55,6 @@ class _TranslateState extends State<Translate> {
     "Hebrew": "he",
     "Croatian": "hr",
     "Hungarian": "hu",
-    "Armenian": "hy",
     "Indonesian": "id",
     "Icelandic": "is",
     "Italian": "it",
@@ -74,6 +75,7 @@ class _TranslateState extends State<Translate> {
     "Dutch Flemish": "nl",
     "Norwegian": "no",
     "Oriya": "or",
+    "Persian": "fa",
     "Polish": "pl",
     "Pushto Pashto": "ps",
     "Portuguese": "pt",
@@ -82,7 +84,6 @@ class _TranslateState extends State<Translate> {
     "Sinhala Sinhalese": "si",
     "Slovak": "sk",
     "Slovenian": "sl",
-    "Albanian": "sq",
     "Serbian": "sr",
     "Swedish": "sv",
     "Swahili": "sw",
@@ -92,7 +93,6 @@ class _TranslateState extends State<Translate> {
     "Ukrainian": "uk",
     "Uzbek": "uz",
     "Vietnamese": "vi",
-    "Chinese": "yue",
     "Zulu": "zu",
   };
 
@@ -118,7 +118,7 @@ class _TranslateState extends State<Translate> {
               onChanged: (value) => {print(value)},
               maxLines: 5,
               decoration: InputDecoration(
-                  hintText: "Enter the text first and then enter language ",
+                  hintText: "Enter your text to be translated!",
                   border: OutlineInputBorder(),
                   errorText: _errortext,
                   suffixIcon: IconButton(
@@ -127,7 +127,6 @@ class _TranslateState extends State<Translate> {
                   )),
               controller: textEditingController,
               onTap: () {
-                //trans();
               },
             ),
           ),
@@ -149,17 +148,17 @@ class _TranslateState extends State<Translate> {
                           borderRadius: BorderRadius.circular(15.0)),
                       child: DropdownButtonHideUnderline(
                         child: DropdownButton<String>(
-                          hint: Text("choose language"),
+                          hint: Text("Choose language"),
                           value: dropdownValue,
                           icon: Icon(Icons.arrow_drop_down),
                           iconSize: 24,
                           elevation: 16,
                           style: TextStyle(
-                            color: Colors.deepPurple,
+                            color: Colors.blue,
                           ),
                           underline: Container(
                             height: 2,
-                            color: Colors.deepPurpleAccent,
+                            color: Colors.blue,
                           ),
                           onChanged: (String newValue) {
                             setState(() {
@@ -198,7 +197,7 @@ class _TranslateState extends State<Translate> {
                     borderRadius: BorderRadius.circular(30)),
                 child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [Icon(Icons.loop_outlined), Text("Change Text")]),
+                    children: [Icon(Icons.loop_outlined), Text("Translate")]),
                 onPressed: () {
                   if (textEditingController.text.isEmpty) {
                     setState(() {
@@ -218,14 +217,14 @@ class _TranslateState extends State<Translate> {
           Text('Translated Text',
               style: TextStyle(fontSize: 17, fontWeight: FontWeight.w900)),
           SizedBox(
-            height: 25,
+            height: 20,
           ),
           Container(
-              width: 350,
-              height: 300,
+              width: 300,
+              height: 250,
               decoration: new BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: Colors.lime),
+                border: Border.all(color: Colors.blue),
               ),
               child: Center(
                   child: SingleChildScrollView(
@@ -246,9 +245,9 @@ class _TranslateState extends State<Translate> {
   Widget _text() {
     if (output == null) {
       return Text(
-        "The translated text is",
+        "Translated Text",
         style: TextStyle(
-          color: Colors.black.withOpacity(0.4),
+          color: Colors.grey,
           fontSize: 17,
         ),
       );

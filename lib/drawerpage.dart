@@ -54,7 +54,7 @@ class Pageofdrawer extends StatelessWidget {
           ListTile(
               leading: Icon(Icons.emoji_emotions),
               title: Text(
-                "more emote",
+                "Easy Access Words",
                 style: TextStyle(
                   fontSize: 18,
                 ),

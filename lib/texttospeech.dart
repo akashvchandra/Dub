@@ -132,16 +132,6 @@ class _TextToSpeechState extends State<TextToSpeech> {
     flutterTts.stop();
   }
 
-  /* List<DropdownMenuItem<String>> getLanguageDropDownMenuItems(
-      dynamic languages) {
-    var items = <DropdownMenuItem<String>>[];
-    for (dynamic type in languages) {
-      items.add(
-          DropdownMenuItem(value: type as String, child: Text(type as String)));
-    }
-    return items;
-  }*/
-
   void changedLanguageDropDownItem(String selectedType) {
     setState(() {
       language = selectedType;
@@ -224,9 +214,9 @@ class _TextToSpeechState extends State<TextToSpeech> {
         if (snapshot.hasData) {
           return _languageDropDownSection(snapshot.data);
         } else if (snapshot.hasError) {
-          return Text('Error loading languages...');
+          return Text('Error loading languages..');
         } else
-          return Text('Loading Languages...');
+          return Text('Loading Languages..');
       });
 
   Widget _inputSection() => Container(
@@ -236,12 +226,12 @@ class _TextToSpeechState extends State<TextToSpeech> {
         controller: _controller,
         decoration: InputDecoration(
             border: OutlineInputBorder(),
-            hintText: 'Enter the Text',
+            hintText: 'Enter your desired text!',
             suffixIcon: IconButton(
               icon: Icon(Icons.clear_rounded),
               onPressed: () => _controller.clear(),
             )),
-        maxLines: 10,
+        maxLines: 5,
         onChanged: (String value) {
           _onChange(value);
         },
@@ -250,7 +240,7 @@ class _TextToSpeechState extends State<TextToSpeech> {
   Widget _btnSection() {
     if (isAndroid) {
       return Container(
-        padding: EdgeInsets.only(top: 50.0),
+        padding: EdgeInsets.only(top: 45.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
@@ -270,7 +260,7 @@ class _TextToSpeechState extends State<TextToSpeech> {
                   iconSize: 75,
                   padding: EdgeInsets.all(16),
                 ),
-                Text("play",
+                Text("Play",
                     style: TextStyle(
                         color: Colors.green,
                         fontSize: 16,
@@ -293,9 +283,9 @@ class _TextToSpeechState extends State<TextToSpeech> {
                   iconSize: 70,
                   padding: EdgeInsets.all(16),
                 ),
-                Text("stop",
+                Text("Stop",
                     style: TextStyle(
-                        color: Colors.red,
+                        color: Colors.blue,
                         fontSize: 16,
                         fontWeight: FontWeight.w400)),
               ],
@@ -349,7 +339,7 @@ class _TextToSpeechState extends State<TextToSpeech> {
                 ),
                 Text("Stop",
                     style: TextStyle(
-                        color: Colors.red,
+                        color: Colors.blue,
                         fontSize: 16,
                         fontWeight: FontWeight.w500)),
               ],
@@ -368,17 +358,14 @@ class _TextToSpeechState extends State<TextToSpeech> {
             child: Container(
               padding: EdgeInsets.only(left: 16.0, right: 16.0),
               decoration: BoxDecoration(
-                  border: Border.all(color: Colors.black, width: 2.0),
-                  borderRadius: BorderRadius.circular(15.0)),
+                  border: Border.all(color: Colors.grey, width: 2.0),
+                  borderRadius: BorderRadius.circular(10.0)),
               child: DropdownButtonHideUnderline(
                 child: DropdownButton<String>(
-                  hint: Text("choose language"),
+                  hint: Text("Choose language"),
                   icon: Icon(Icons.arrow_drop_down),
                   iconSize: 36.0,
-                  style: TextStyle(color: Colors.deepPurple, fontSize: 15),
-                  //value: language,
-                  //items: getLanguageDropDownMenuItems(languages),
-                  //onChanged: changedLanguageDropDownItem,
+                  style: TextStyle(color: Colors.blue, fontSize: 15),
                   value: dropdownvalue,
                   onChanged: (String newvalue) {
                     setState(() {
@@ -475,7 +462,7 @@ class _TextToSpeechState extends State<TextToSpeech> {
     return Container(
         child: Column(children: [
       Container(
-        child: Text('Speed Rate'),
+        child: Text('Speech Rate'),
       ),
       Slider(
         value: rate,

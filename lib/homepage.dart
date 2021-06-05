@@ -30,7 +30,7 @@ class _HomepageState extends State<Homepage> {
         builder: (BuildContext context) {
           return AlertDialog(
             title: Text('Are you sure?'),
-            content: Text('You are going to exit the application!'),
+            content: Text('You are going to exit the app!'),
             actions: <Widget>[
               FlatButton(
                 child: Text('NO'),
@@ -77,7 +77,6 @@ class _HomepageState extends State<Homepage> {
             body: _childern[_currentindex],
             bottomNavigationBar: Theme(
               data: ThemeData(
-                //backgroundColor: Theme.of(context).primaryColor,
                 splashColor: Colors.blue,
               ),
               child: bottomNavigationBar,
@@ -117,18 +116,7 @@ class _HomepageState extends State<Homepage> {
   }
 
   Widget get bottomNavigationBar {
-    return /* Container(
-     /*  decoration: BoxDecoration(
-          borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(30), topRight: Radius.circular(30)),
-          boxShadow: [
-            BoxShadow(color: Colors.black38, spreadRadius: 0, blurRadius: 10),
-          ]), */
-      child: ClipRRect(
-        borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(30), topRight: Radius.circular(30)),
-        child: */
-        BottomNavigationBar(
+    return BottomNavigationBar(
       backgroundColor: Theme.of(context).primaryColor,
       selectedItemColor: Colors.blue,
       unselectedItemColor: Colors.grey[500],
@@ -146,8 +134,6 @@ class _HomepageState extends State<Homepage> {
         BottomNavigationBarItem(
             icon: Icon(Icons.emoji_emotions), title: Text('Emote')),
       ],
-      /*  ),
-      ), */
     );
   }
 }
